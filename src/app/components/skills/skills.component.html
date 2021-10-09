@@ -1,0 +1,12 @@
+<div class="text-center">
+  <h2 class="font-akronim font-2rem">MY SKILLS</h2>
+</div>
+<div class="row">
+  <div *ngFor="let skill of skills" class="col-md-3">
+    <h2 class="font-akronim font-2rem">{{ skill.header }}</h2>
+    <hr />
+    <p class="font-courgette font-2rem lh-30">
+      {{ skill.content }}
+    </p>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-center">
+  <img alt="avatar" class="avatar img-responsive mb-5" src="/assets/images/avatar.jpg" />
+</div>
+<div class="text-center">
+  <h2 class="font-akronim font-2rem">ABOUT ME</h2>
+  <p class="font-courgette font-2rem lh-30">
+    Full stack web developer with a passion for creating elegant solutions in minimum amount of time.
+  </p>
+  <p class="font-courgette font-2rem lh-30">
+    Avid learner and
+    passionate about automating things,
+    software architectures, and developing
+    large scale applications.
+  </p>
+  <p class="font-courgette font-2rem lh-30">
+    <strong>Current focus:</strong> specializing Angular and Java language and frameworks
+  </p>
+  <hr />
+  <h2 class="font-akronim font-2rem">CAREER OBJECTIVE</h2>
+  <p class="font-courgette font-2rem lh-30">
+    To be able to utilize the skills and work along with development, improvement of the necessary skills in
+    order to become the competent software engineer.
+  </p>
+  <hr />
+  <h2 class="font-akronim font-2rem">INTERESTS</h2>
+  <div class="row">
+    <div *ngFor="let interest of interests" class="col-md-2 d-flex justify-content-center lh-30">
+      <span class="d-flex align-items-center text-white">
+        <mat-icon>{{ interest.icon }}</mat-icon><span class="px-3">{{ interest.name }}</span>
+      </span>
+    </div>
+  </div>
+</div>
