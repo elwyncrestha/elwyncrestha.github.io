@@ -1,0 +1,25 @@
+/* Fonts */
+@font-face {
+  font-family: Akronim;
+  src: url(/assets/fonts/Akronim/Akronim-Regular.ttf);
+}
+.font-akronim {
+  font-family: 'akronim', Roboto, "Helvetica Neue", sans-serif !important;
+}
+
+@font-face {
+  font-family: Courgette;
+  src: url(/assets/fonts/Courgette/Courgette-Regular.ttf);
+}
+.font-courgette {
+  font-family: 'Courgette', Roboto, "Helvetica Neue", sans-serif !important;
+}
+
+
+/* Font Sizes */
+.font-2pt5rem {
+  font-size: 3rem !important;
+}
+.font-2rem {
+  font-size: 1.5rem !important;
+}
