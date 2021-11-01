@@ -1,7 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { take } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { MatSnackbarService } from '../../modules/mat/services/mat-snackbar.service';
 
@@ -14,7 +12,6 @@ export class ContactComponent implements OnInit {
   contactForm!: FormGroup;
 
   constructor(
-    private readonly http: HttpClient,
     private readonly fb: FormBuilder,
     private readonly snackbar: MatSnackbarService
   ) {}
@@ -37,15 +34,23 @@ export class ContactComponent implements OnInit {
     formData.append('subject', formValue.subject);
     formData.append('message', formValue.message);
 
-    this.http
-      .post(environment.actionFormsIoUrl, formData, { headers: { 'sec-fetch-mode': 'no-cors' } })
-      .pipe(take(1))
-      .subscribe(
-        () => {
+    const requestOptions: RequestInit = {
+      method: 'POST',
+      body: formData,
+      redirect: 'follow',
+    };
+
+    fetch(environment.actionFormsIoUrl, requestOptions)
+      .then((r) => {
+        if (r.status === 200) {
           this.snackbar.open({ message: 'Successfully sent!' });
           this.contactForm.reset();
-        },
-        () => this.snackbar.open({ message: 'Failed to send' })
-      );
+        } else {
+          this.snackbar.open({ message: 'Failed to send' });
+        }
+      })
+      .catch(() => {
+        () => this.snackbar.open({ message: 'Failed to send' });
+      });
   }
 }
