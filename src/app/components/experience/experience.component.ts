@@ -19,7 +19,7 @@ export class ExperienceComponent implements OnInit {
       title: 'SOFTWARE DEVELOPER',
       duration: '2018 to 2020',
       employer: 'SB SOLUTIONS PVT. LTD',
-      location: 'Jamal, Kathmandu, Nepal',
+      location: 'Charkhal, Kathmandu, Nepal',
       description:
         'Key contributor to startup company’s fast evolution from selling a niche product to offering a full solutions to the Nepal\'s financial market.',
     },
