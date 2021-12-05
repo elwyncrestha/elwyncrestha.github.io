@@ -5,20 +5,7 @@
 
       <div class="row">
         <div *ngFor="let detail of repo.repos" class="col-md-3">
-          <div class="card text-black">
-            <div class="card-header">{{ detail.name }}</div>
-            <div class="card-body">
-              <p>{{ detail.description }}</p>
-              <p>
-                <span class="text-danger" *ngFor="let topic of detail.topics">
-                  #{{ topic }}&nbsp;
-                </span>
-              </p>
-            </div>
-            <div class="card-footer">
-              Created at: {{ detail.created_at | date }}
-            </div>
-          </div>
+          <app-repo-detail [fetchDetailBasedOnRoute]="false" [detail]="detail"></app-repo-detail>
         </div>
       </div>
       <hr />
