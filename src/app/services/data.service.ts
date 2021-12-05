@@ -7,6 +7,7 @@ import { GitHubProfile } from '../models/github-profile.model';
 })
 export class DataService {
   GITHUB_PROFILE = new ObservableStore<GitHubProfile>({});
+  repos = new ObservableStore<any[]>([]);
 
   constructor() { }
 }

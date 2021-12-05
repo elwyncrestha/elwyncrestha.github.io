@@ -1,7 +1,7 @@
 <div class="card text-black">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
-      <h2>{{ detail.name }}</h2>
+      <h2 [routerLink]="Routes.REPOS + '/' + detail.name" class="c-pointer">{{ detail.name }}</h2>
       <button class="btn btn-outline-primary" title="Clone" appClipboardCopy [copyText]="detail.clone_url">
         <mat-icon>content_copy</mat-icon>
       </button>
@@ -16,6 +16,13 @@
     </p>
   </div>
   <div class="card-footer">
-    Created at: {{ detail.created_at | date }}
+    <div class="d-flex justify-content-between">
+      <p>
+        Created at: {{ detail.created_at | date }}
+      </p>
+      <p>
+        Updated at: {{ detail.created_at | date }}
+      </p>
+    </div>
   </div>
 </div>

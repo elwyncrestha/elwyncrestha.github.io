@@ -4,7 +4,7 @@
       <h2 class="font-akronim font-2rem">{{ repo.category }}</h2>
 
       <div class="row">
-        <div *ngFor="let detail of repo.repos" class="col-md-3">
+        <div *ngFor="let detail of repo.repos" class="col-md-3 py-2">
           <app-repo-detail [detail]="detail"></app-repo-detail>
         </div>
       </div>

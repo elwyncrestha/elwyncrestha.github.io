@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { RouteConstant } from 'src/app/constants/route.constant';
 
 @Component({
   selector: 'app-repo-detail',
@@ -7,5 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class RepoDetailComponent {
   @Input() detail: any = {};
+
+  Routes = RouteConstant;
 
 }
