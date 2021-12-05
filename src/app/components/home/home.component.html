@@ -1,4 +1,4 @@
-<mat-tab-group animationDuration="1500ms" mat-align-tabs="center" dynamicHeight="true">
+<mat-tab-group animationDuration="1500ms" mat-align-tabs="center" dynamicHeight="true" (selectedTabChange)="handleTabChange($event)">
   <mat-tab *ngFor="let tab of TABS">
     <ng-template mat-tab-label>
       <span class="d-flex align-items-center text-white">

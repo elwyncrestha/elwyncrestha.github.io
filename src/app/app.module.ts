@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { OthersComponent } from './components/others/others.component';
 import { HomeComponent } from './components/home/home.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { GoogleAnalyticsService } from './services/google-analytics.service';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },
+    GoogleAnalyticsService
   ],
   bootstrap: [AppComponent],
 })
