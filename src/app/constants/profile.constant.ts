@@ -1,4 +1,6 @@
-export const PROFILE = {
-  name: 'ELVIN SHRESTHA',
-  title: 'I am a Full Stack Developer',
+import { GitHubProfile } from '../models/github-profile.model';
+
+export const DEFAULT_PROFILE: GitHubProfile = {
+  name: 'Elvin Shrestha',
+  bio: 'I am a Full Stack Developer',
 };

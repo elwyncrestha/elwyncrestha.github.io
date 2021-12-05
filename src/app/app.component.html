@@ -1,9 +1,9 @@
 <header class="mb-auto">
   <div class="d-flex justify-content-center w-100 pt-4">
-    <h1 class="float-md-start mb-0 font-akronim font-2pt5rem">{{ PROFILE.name }}</h1>
+    <h1 class="float-md-start mb-0 font-akronim font-2pt5rem">{{ (ds.GITHUB_PROFILE.value$ | async)?.name }}</h1>
   </div>
   <div class="d-flex justify-content-center w-100 pt-2">
-    <h5 class="font-akronim font-2rem">{{ PROFILE.title }}</h5>
+    <h5 class="font-akronim font-2rem">{{ (ds.GITHUB_PROFILE.value$ | async)?.bio }}</h5>
   </div>
 </header>
 <mat-tab-group animationDuration="1500ms" mat-align-tabs="center" dynamicHeight="true">

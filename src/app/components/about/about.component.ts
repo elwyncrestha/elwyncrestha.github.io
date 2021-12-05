@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-about',
@@ -15,7 +16,7 @@ export class AboutComponent implements OnInit {
     { name: 'Gadgets', icon: 'devices_other' },
   ];
 
-  constructor() { }
+  constructor(public readonly ds: DataService) { }
 
   ngOnInit(): void {
   }

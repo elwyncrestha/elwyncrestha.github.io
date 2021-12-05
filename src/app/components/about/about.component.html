@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-center">
-  <img alt="avatar" class="avatar img-responsive mb-5" src="/assets/images/avatar.jpg" />
+  <img alt="avatar" class="avatar img-responsive mb-5" [src]="(ds.GITHUB_PROFILE.value$ | async)?.avatar_url" />
 </div>
 <div class="text-center">
   <h2 class="font-akronim font-2rem">ABOUT ME</h2>
