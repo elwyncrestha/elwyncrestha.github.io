@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { forkJoin } from 'rxjs';
-import { combineAll } from 'rxjs/operators';
 import { REPOS } from 'src/app/constants/repos.constant';
 import { UrlConstant } from 'src/app/constants/url.constant';
 import { DataService } from 'src/app/services/data.service';
