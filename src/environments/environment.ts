@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   actionFormsIoUrl: 'https://www.actionforms.io/e/r/elwyncrestha.github.io',
-  GITHUB_URL: 'https://api.github.com/users/elwyncrestha',
+  GITHUB_URL: 'https://api.github.com',
 };
 
 /*

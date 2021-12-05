@@ -1,0 +1,36 @@
+<mat-tab-group animationDuration="1500ms" mat-align-tabs="center" dynamicHeight="true">
+  <mat-tab *ngFor="let tab of TABS">
+    <ng-template mat-tab-label>
+      <span class="d-flex align-items-center text-white">
+        <mat-icon>{{ tab.icon }}</mat-icon>
+        <span class="px-3">{{ tab.name }}</span>
+      </span>
+    </ng-template>
+    <div class="p-5">
+      <ng-container
+        [ngTemplateOutlet]="tabTemplate"
+        [ngTemplateOutletContext]="{ tabName: tab.name }"
+      ></ng-container>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+
+<ng-template #tabTemplate let-tabName="tabName">
+  <ng-container [ngSwitch]="tabName">
+    <ng-container *ngSwitchCase="TAB_NAMES.ABOUT">
+      <app-about></app-about>
+    </ng-container>
+    <ng-container *ngSwitchCase="TAB_NAMES.EXPERIENCE">
+      <app-experience></app-experience>
+    </ng-container>
+    <ng-container *ngSwitchCase="TAB_NAMES.SKILLS">
+      <app-skills></app-skills>
+    </ng-container>
+    <ng-container *ngSwitchCase="TAB_NAMES.CONTACT">
+      <app-contact></app-contact>
+    </ng-container>
+    <ng-container *ngSwitchCase="TAB_NAMES.OTHERS">
+      <app-others></app-others>
+    </ng-container>
+  </ng-container>
+</ng-template>

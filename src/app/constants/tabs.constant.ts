@@ -3,6 +3,7 @@ export const TAB_NAMES = {
   EXPERIENCE: 'Experience',
   SKILLS: 'Skills',
   CONTACT: 'Contact',
+  OTHERS: 'Others'
 };
 
 export const TABS = [
@@ -10,4 +11,5 @@ export const TABS = [
   { name: TAB_NAMES.EXPERIENCE, icon: 'trending_up' },
   { name: TAB_NAMES.SKILLS, icon: 'bar_chart' },
   { name: TAB_NAMES.CONTACT, icon: 'contact_mail' },
+  { name: TAB_NAMES.OTHERS, icon: 'inventory' },
 ];
