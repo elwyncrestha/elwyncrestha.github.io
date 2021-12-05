@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RepoDetailComponent } from './components/repo-detail/repo-detail.component';
+import { RepoComponent } from './components/repo/repo.component';
 import { ReposComponent } from './components/repos/repos.component';
 
 const routes: Routes = [
@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: ':repoName',
-    component: RepoDetailComponent
+    component: RepoComponent
   }
 ];
 

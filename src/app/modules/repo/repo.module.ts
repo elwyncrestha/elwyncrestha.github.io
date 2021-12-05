@@ -6,12 +6,14 @@ import { ReposComponent } from './components/repos/repos.component';
 import { RepoDetailComponent } from './components/repo-detail/repo-detail.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ClipboardModule } from '../clipboard/clipboard.module';
+import { RepoComponent } from './components/repo/repo.component';
 
 
 @NgModule({
   declarations: [
     ReposComponent,
-    RepoDetailComponent
+    RepoDetailComponent,
+    RepoComponent
   ],
   imports: [
     CommonModule,

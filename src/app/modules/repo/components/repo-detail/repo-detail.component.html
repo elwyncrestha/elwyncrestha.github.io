@@ -1,23 +1,21 @@
-<div class="p-5">
-  <div class="card text-black">
-    <div class="card-header">
-      {{ detail.name }}
-      <div class="d-flex justify-content-end align-items-center">
-        <button class="btn btn-outline-primary" title="Clone" appClipboardCopy [copyText]="detail.clone_url">
-          <mat-icon>content_copy</mat-icon>
-        </button>
-      </div>
+<div class="card text-black">
+  <div class="card-header">
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>{{ detail.name }}</h2>
+      <button class="btn btn-outline-primary" title="Clone" appClipboardCopy [copyText]="detail.clone_url">
+        <mat-icon>content_copy</mat-icon>
+      </button>
     </div>
-    <div class="card-body">
-      <p>{{ detail.description }}</p>
-      <p>
-        <span class="text-danger" *ngFor="let topic of detail.topics">
-          #{{ topic }}&nbsp;
-        </span>
-      </p>
-    </div>
-    <div class="card-footer">
-      Created at: {{ detail.created_at | date }}
-    </div>
+  </div>
+  <div class="card-body">
+    <p>{{ detail.description || 'No description' }}</p>
+    <p>
+      <span class="text-danger" *ngFor="let topic of detail.topics">
+        #{{ topic }}&nbsp;
+      </span>
+    </p>
+  </div>
+  <div class="card-footer">
+    Created at: {{ detail.created_at | date }}
   </div>
 </div>

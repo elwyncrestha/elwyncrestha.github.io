@@ -5,7 +5,7 @@
 
       <div class="row">
         <div *ngFor="let detail of repo.repos" class="col-md-3">
-          <app-repo-detail [fetchDetailBasedOnRoute]="false" [detail]="detail"></app-repo-detail>
+          <app-repo-detail [detail]="detail"></app-repo-detail>
         </div>
       </div>
       <hr />
