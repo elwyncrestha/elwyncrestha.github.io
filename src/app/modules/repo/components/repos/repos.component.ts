@@ -40,10 +40,15 @@ export class ReposComponent implements OnInit {
       repos: repos.map((r) => repoDetails.find((rr) => rr.name == r)),
     }));
 
+    this.repos.push({
+      category: 'Forked',
+      repos: repoDetails.filter((r) => r.fork)
+    });
+
     const categorizedRepos = REPOS.map((r) => r.repos).reduce((p, c) => p.concat(c), []);
     this.repos.push({
       category: 'Uncategorized',
-      repos: repoDetails.filter((r) => !categorizedRepos.includes(r.name))
+      repos: repoDetails.filter((r) => !categorizedRepos.includes(r.name) && !r.fork).sort((a, b) => (new Date(b.created_at) as any) - (new Date(a.created_at) as any))
     });
   }
 }
