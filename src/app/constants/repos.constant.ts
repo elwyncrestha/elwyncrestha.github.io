@@ -2,6 +2,7 @@ export const REPOS: { category: string; repos: string[]; }[] = [
   {
     category: 'Workshops & Training',
     repos: [
+      'ng-batch202112',
       'js-batch202111',
       'inventory-service',
       'ng-batch202108',
