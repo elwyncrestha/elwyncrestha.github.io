@@ -107,6 +107,7 @@ export const REPOS: { category: string; repos: string[]; }[] = [
   {
     category: 'NodeJS',
     repos: [
+      'api-proxy',
       'daraz-api',
       'node-express-mongo-demo',
     ]
