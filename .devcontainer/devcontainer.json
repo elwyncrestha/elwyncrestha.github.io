@@ -1,3 +1,4 @@
+// devcontainer.json options: https://containers.dev/implementors/json_reference/
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
 {
@@ -17,8 +18,15 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
+	"remoteEnv": {
+    "NG_CLI_ANALYTICS": "false"
+  },
+
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "npm ci",
+
+	// Use `postStartCommand` to run commands each time the container is successfully started.
+	// "postStartCommand": "npm run start"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
